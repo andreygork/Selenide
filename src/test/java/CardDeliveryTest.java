@@ -24,7 +24,7 @@ public class CardDeliveryTest {
 
     @Test
     public void shouldGetSuccess() {
-        $("[data-test-id=city] input").setValue("Моcква");
+        $("[data-test-id=city] input").setValue("Москва");
         String date = LocalDate.now().plusDays(3).format((DateTimeFormatter.ofPattern("dd.MM.yyyy")));
         $("[data-test-id=date] input").doubleClick().sendKeys(Keys.BACK_SPACE);
         $("[data-test-id=date] input").sendKeys(date);
@@ -34,4 +34,5 @@ public class CardDeliveryTest {
         $$("[class=button__text]").find(exactText("Забронировать")).click();
         $("[data-test-id=notification]").shouldBe(text("Успешно! Встреча успешно забронирована на "
                 + date), Duration.ofSeconds(15)).shouldBe(visible);
-
+    }
+}
