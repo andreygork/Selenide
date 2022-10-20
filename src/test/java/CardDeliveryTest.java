@@ -13,9 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryTest {
 
-    // String currentDate(int day) {
-    //  return LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-    //}
+
 
     @BeforeEach
     void setUp() {
